@@ -6,7 +6,6 @@ import {
 } from "./styles";
 import Link from "next/link";
 import { ATag } from "../../../styles/common";
-//import './.css';
 
 const DesktopNav = ({ stickyNav, router, navLight }) => {
   return (
