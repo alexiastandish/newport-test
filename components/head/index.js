@@ -1,5 +1,5 @@
-import React from 'react';
-import Helmet from 'react-helmet';
+import React from "react";
+import Helmet from "react-helmet";
 
 const Head = props => {
   const { page, title, description, image } = props;
@@ -17,6 +17,10 @@ const Head = props => {
   return (
     <Helmet>
       <title>{title}</title>
+      <link
+        href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700"
+        rel="stylesheet"
+      />
       <meta name="health-med-hospital-surgeon" content="yes" />
       <meta
         name="viewport"
@@ -31,7 +35,7 @@ const Head = props => {
       <meta
         property="og:url"
         content={
-          typeof window !== 'undefined' ? window.document.URL : 'missing'
+          typeof window !== "undefined" ? window.document.URL : "missing"
         }
       />
 
