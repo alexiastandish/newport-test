@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "header": "Ensuring the financial health of the practices we serve.",
+    "subheader": "The last RCM company you will ever have to partner with.",
+    "button": { "text": "Check us out", "link": "/about" }
+  },
+  "services": [
+    {
+      "service": "Revenue cycle management",
+      "desc": "Financial expectations drive our processes and IT platforms, including feedback + client education.",
+      "button": {
+        "text": "Learn More",
+        "link": "/services/#revenue-cycle-management"
+      }
+    },
+    {
+      "service": "Cloud based services",
+      "desc": "Our offerings are global, 24/7, HIPAA Compliant on the cloud.",
+      "button": {
+        "text": "Learn More",
+        "link": "/services/#cloud-based-services"
+      }
+    },
+    {
+      "service": "Solutions integration",
+      "desc": "Revenue focused IT solutions. Home-grown Analytics Dashboard. Robotic process automation (Bot’s).",
+      "button": {
+        "text": "Learn More",
+        "link": "/services/#solutions-integration"
+      }
+    },
+    {
+      "service": "Practice advocates",
+      "desc": "Though our services are comprehensive and complex, we make them simple for you.",
+      "button": {
+        "text": "Learn More",
+        "link": "/services/#practice-advocates"
+      }
+    }
+  ],
+  "ourProcess": {
+    "header": "No Surprises!",
+    "subheader": "Our Process: The NewportMed Way.",
+    "desc": "Because our goal is to increase client revenue and decrease wasteful processes, we never stop refining and improving operations, products and services.",
+    "button": { "text": "Learn more about our process", "link": "/process" }
+  },
+  "coreValues": {
+    "header": "Our Core Values",
+    "subheader": "We ensure the financial health of the practices we serve by living our core values from the top down.",
+    "button": { "text": "Learn more about us", "link": "/about" },
+    "values": [
+      {
+        "value": "Family",
+        "desc": "Family is the foundation in which we thrive, at home and at work, we are family.",
+        "verse": "Acts 2:46",
+        "icon": "/images/icons/family.svg"
+      },
+      {
+        "value": "Excellence",
+        "desc": "Excellence inspires men and honors God.",
+        "verse": "Colossians 3:23-24",
+        "icon": "/images/icons/excellent.svg"
+      },
+      {
+        "value": "Honesty and Integrity",
+        "desc": "We believe in honesty and integrity in everything we do. ",
+        "verse": "Psalms 25:21",
+        "icon": "/images/icons/honesty.svg"
+      },
+      {
+        "value": "Making a positive difference",
+        "desc": "Our goal is to make a positive difference in the lives of our clients and the patients they serve.",
+        "verse": "Matthew 5:16",
+        "icon": "/images/icons/happy.svg"
+      },
+      {
+        "value": "No Surprises",
+        "desc": "We value relationships with no surprises, and we strive to model it by keeping you informed and able to make sound decisions.",
+        "verse": "Isaiah 42:9",
+        "icon": "/images/icons/plan.svg"
+      }
+    ]
+  }
+}

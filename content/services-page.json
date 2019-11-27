@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "header": "Services that are second-to-none.",
+    "subheader": "Learn more about our services that make your life easier.",
+    "services": [
+      {
+        "service": "Revenue Cycle Management (RCM)",
+        "link": "#revenue-cycle-management",
+        "icon": "/images/icons/money.svg"
+      },
+      {
+        "service": "Cloud based services",
+        "link": "#cloud-based-services",
+        "icon": "/images/icons/cloud.svg"
+      },
+      {
+        "service": "Solutions integration",
+        "link": "#solutions-integration",
+        "icon": "/images/icons/gear.svg"
+      },
+      {
+        "service": "Practice advocates",
+        "link": "#practice-advocates",
+        "icon": "/images/icons/medical.svg"
+      }
+    ]
+  }
+}
