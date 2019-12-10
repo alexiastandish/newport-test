@@ -30,6 +30,9 @@ const StyledDesktopNav = styled.div`
 
 const StyledNewportMedLogo = styled.img`
   width: 200px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const StyledNavLinksWrapper = styled.div`

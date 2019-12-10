@@ -44,8 +44,7 @@ const OurProcess = props => {
                 >
                   <Header>{ourProcess.header}</Header>
                   <Subheader>{ourProcess.subheader}</Subheader>
-                  <Body>{ourProcess.desc}</Body>
-                  <br />
+                  <Body style={{ marginBottom: 22 }}>{ourProcess.desc}</Body>
 
                   <Link href={ourProcess.button.link}>
                     <ButtonLink type="primary">

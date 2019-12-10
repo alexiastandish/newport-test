@@ -1,6 +1,6 @@
-import React from 'react';
-import { Waypoint } from 'react-waypoint';
-import { onEnterPosition } from '../../../helpers/onEnterPosition';
+import React from "react";
+import { Waypoint } from "react-waypoint";
+import { onEnterPosition } from "../../../helpers/onEnterPosition";
 
 const ScrollIntoView = ({ children, returnFunc }) => {
   const positionEntered = ({ currentPosition, previousPosition }) => {

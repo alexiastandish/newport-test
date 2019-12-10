@@ -10,6 +10,11 @@ const Header = styled.h1`
   color: ${props => props.theme.fg || colors.blue};
   transition: 400ms ease-in;
 
+  ${media.sm`
+    text-align: center;
+    margin: 0 auto;
+  `}
+
   ${media.smxs`
     font-size: 34px;
     line-height: 42px;

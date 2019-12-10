@@ -1,4 +1,4 @@
-import { Row, Column } from "../../styles/common";
+import { Row, Column, Body } from "../../styles/common";
 import styled from "styled-components";
 import media from "../../styles/_media";
 
@@ -9,6 +9,9 @@ const StyledAboutRow = styled(Row)`
     &:nth-of-type(1) {
       padding-right: 30px;
       box-sizing: border-box;
+      ${media.sm`
+        padding-right: 0px;
+      `}
     }
     &:nth-of-type(2) {
       padding-left: 30px;
@@ -17,8 +20,18 @@ const StyledAboutRow = styled(Row)`
       padding-left: 0px;
       margin-top: 80px;
       `}
+      ${media.sm`
+      padding-left: 0px;
+    `}
     }
   }
 `;
 
-export { StyledAboutRow };
+const StyledAboutBody = styled(Body)`
+  ${media.sm`
+    text-align: center;
+    margin: 0 auto;
+  `}
+`;
+
+export { StyledAboutRow, StyledAboutBody };

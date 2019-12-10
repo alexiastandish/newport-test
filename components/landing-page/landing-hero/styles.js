@@ -2,8 +2,12 @@ import styled from "styled-components";
 import { Column, Hero, Container } from "../../../styles/common";
 import media from "../../../styles/_media";
 
-const StyledServiceCircleWrapper = styled(Column)`
+const StyledServiceCircleWrapper = styled.div`
   opacity: 0;
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 50%;
   padding-left: 8em;
   ${props => props.beginAnimation && `opacity: 1`};
   transition: 1200ms ease-in;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Hero, Column, Container } from "../../../styles/common";
+import { Hero, Column, Container, ButtonLink } from "../../../styles/common";
 import media from "../../../styles/_media";
 
 const StyledProcessHero = styled(Hero)`
@@ -25,6 +25,12 @@ const StyledContentCol = styled(Column)`
   a {
     align-self: flex-start;
     justify-self: flex-start;
+  }
+
+  ${ButtonLink} {
+    ${media.sm`
+      margin: 0 auto;
+    `}
   }
 `;
 

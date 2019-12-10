@@ -1,57 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { ThemeProvider, lightGradient, base, centered } from "../styles/theme";
-import {
-  Hero,
-  Container,
-  Header,
-  Column,
-  Row,
-  Subheader,
-  Body
-} from "../styles/common";
+import { Hero, Container, Header, Subheader, Body } from "../styles/common";
 import Layout from "../components/layouts";
-import { StyledNMEImg } from "../components/process/styles";
+import {
+  StyledNMEImg,
+  StyledProcessContainer
+} from "../components/process/styles";
+import { hero, newportmedEffect } from "../content/process-page.json";
+import ScrollIntoView from "../components/render-props/scroll-into-view";
+import { EaseInBottom } from "../helpers/triggerAnimations";
 
 const Process = props => {
-  //
+  const [heroState, setHeroAnimation] = useState(false);
+  const [chartState, setChartAnimation] = useState(false);
   return (
     <Layout>
       <ThemeProvider theme={lightGradient(base)}>
-        <Hero layout={centered}>
-          <Container>
-            <Header>
-              Our goal is to increase client revenue and decrease wasteful
-              processes.
-            </Header>
-            <Subheader>
-              The latest technology and proprietary processes are used to ensure
-              all charges are captured, documented, submitted and paid.
-            </Subheader>
-            <Body>
-              The latest technology and proprietary processes are used to ensure
-              all charges are captured, documented, submitted and paid. We rank
-              in the top 5% in all of the most important MGMA benchmarks, and we
-              continue to make strides in the areas of accuracy, turnaround time
-              and revenue maximization. We believe in doing it right the first
-              time!
-            </Body>
-          </Container>
-        </Hero>
+        <ScrollIntoView returnFunc={setHeroAnimation}>
+          <Hero layout={centered}>
+            <StyledProcessContainer>
+              <EaseInBottom triggerEaseIn={heroState} target="our-process-hero">
+                <Header>{hero.header}</Header>
+                <br />
+                <br />
+                <Body>{hero.body}</Body>
+              </EaseInBottom>
+            </StyledProcessContainer>
+          </Hero>
+        </ScrollIntoView>
       </ThemeProvider>
       <ThemeProvider theme={base}>
-        <Hero layout={centered}>
-          <Container>
-            <Header>The NewportMed Effect</Header>
-            <Subheader>
-              We never stop refining and improving operations, products and
-              services.
-            </Subheader>
-            <StyledNMEImg
-              src="/images/process/newportmed-effect-process.jpg"
-              alt="newportmed-effect"
-            />
-          </Container>
-        </Hero>
+        <ScrollIntoView returnFunc={setChartAnimation}>
+          <Hero layout={centered}>
+            <Container>
+              <EaseInBottom
+                triggerEaseIn={chartState}
+                target="our-process-chart"
+              >
+                <Header>{newportmedEffect.header}</Header>
+                <Subheader>{newportmedEffect.subheader}</Subheader>
+                <StyledNMEImg
+                  src="/images/process/newportmed-effect-process.jpg"
+                  alt="newportmed-effect"
+                />
+              </EaseInBottom>
+            </Container>
+          </Hero>
+        </ScrollIntoView>
       </ThemeProvider>
     </Layout>
   );

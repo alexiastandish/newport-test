@@ -32,6 +32,13 @@ const Container = styled.section`
   padding-right: 25px;
   `};
 
+  ${media.sm`
+  ${props => props.headingContainer && `padding-top: 120px`};
+  `};
+  ${media.smxs`
+  ${props => props.headingContainer && `padding-top: 120px`};
+  `};
+
   ${media.xs`
   width: 100%;
   padding-top: 100px;

@@ -14,6 +14,8 @@ const Subheader = styled.p`
   color: ${props => props.theme.fg || colors.blue};
 
   ${media.sm`
+  margin-left: auto;
+  margin-right: auto;
   font-size: 18px;
   line-height: 28px;
 `};

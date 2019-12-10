@@ -13,7 +13,7 @@ const DesktopNav = ({ stickyNav, router, navLight }) => {
       <StyledNewportMedLogo
         src="/images/logos/npm-logo.png"
         alt="newport-med"
-        onClick={() => router.push("/")}
+        onClick={() => router.push("/").then(() => window.scrollTo(0, 0))}
       />
       <StyledNavLinksWrapper>
         <Link href="/about">

@@ -10,6 +10,7 @@ import {
   StyledServicesContainer
 } from "./styles";
 import Link from "next/link";
+import { withRouter } from "next/router";
 import { services } from "../../../../content/home-page.json";
 
 const Services = props => {
@@ -29,7 +30,13 @@ const Services = props => {
               <StyledBoxSubheader>{services[0].service}</StyledBoxSubheader>
               <Body>{services[0].desc}</Body>
               <br />
-              <Link href={services[0].button.link}>
+              <Link
+                href={{
+                  pathname: "services",
+                  query: { name: services[0].button.link }
+                }}
+                as={`/services`}
+              >
                 <ButtonLink type="link-btn-inverted">
                   {services[0].button.text}
                 </ButtonLink>
@@ -48,7 +55,14 @@ const Services = props => {
               <StyledBoxSubheader>{services[1].service}</StyledBoxSubheader>
               <Body>{services[1].desc}</Body>
               <br />
-              <Link href={services[1].button.link}>
+
+              <Link
+                href={{
+                  pathname: "services",
+                  query: { name: services[1].button.link }
+                }}
+                as={`/services`}
+              >
                 <ButtonLink type="link-btn-inverted">
                   {services[1].button.text}
                 </ButtonLink>
@@ -67,7 +81,13 @@ const Services = props => {
               <StyledBoxSubheader>{services[2].service}</StyledBoxSubheader>
               <Body>{services[2].desc}</Body>
               <br />
-              <Link href={services[2].button.link}>
+              <Link
+                href={{
+                  pathname: "services",
+                  query: { name: services[2].button.link }
+                }}
+                as={`/services`}
+              >
                 <ButtonLink type="link-btn-inverted">
                   {services[2].button.text}
                 </ButtonLink>
@@ -86,7 +106,13 @@ const Services = props => {
               <StyledBoxSubheader>{services[3].service}</StyledBoxSubheader>
               <Body>{services[3].desc}</Body>
               <br />
-              <Link href={services[3].button.link}>
+              <Link
+                href={{
+                  pathname: "services",
+                  query: { name: services[3].button.link }
+                }}
+                as={`/services`}
+              >
                 <ButtonLink type="link-btn-inverted">
                   {services[3].button.text}
                 </ButtonLink>
@@ -98,4 +124,5 @@ const Services = props => {
     </StyledServicesContainer>
   );
 };
-export default Services;
+
+export default withRouter(Services);

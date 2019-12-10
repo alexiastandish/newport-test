@@ -60,7 +60,7 @@ const StyledMobileResponsiveCarousel = styled(Container)`
   display: none;
 
   ${media.smxs`
-  overflow: hidden;
+  // overflow: hidden;
   display: block;
   padding-left: 0px;
   padding-right: 0px;

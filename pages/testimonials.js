@@ -20,6 +20,7 @@ import {
   StyledHeroTestimonialInfo,
   StyledHeroTestimonialImage
 } from "../components/testimonials-list/styles";
+import { colors } from "../styles/_variables";
 import { EaseInLeft, EaseInRight } from "../helpers/triggerAnimations";
 
 const Testimonials = props => {
@@ -78,10 +79,15 @@ const Testimonials = props => {
                       <StyledHeroTestimonialImage
                         src={testimonials[slideIdx].image}
                         alt={testimonials[slideIdx].person}
+                        headshot={testimonials[slideIdx].headshot}
                       />
                       <div className="hero-testimonial-info">
-                        <Body>{testimonials[slideIdx].person}</Body>
-                        <Body>{testimonials[slideIdx].position}</Body>
+                        <Body color={colors.gray}>
+                          {testimonials[slideIdx].person}
+                        </Body>
+                        <Body color={colors.gray}>
+                          {testimonials[slideIdx].position}
+                        </Body>
                       </div>
                     </StyledHeroTestimonialInfo>
                   </StyledHeroTestimonial>

@@ -8,6 +8,7 @@ import {
 } from "./styles";
 import ScrollIntoView from "../render-props/scroll-into-view";
 import { EaseInBottom } from "../../helpers/triggerAnimations";
+import { colors } from "../../styles/_variables";
 
 const TestimonialsList = ({ setSlide, testimonials }) => {
   const [easeUpBoxesAnimation, easeUpBoxesAnimationFunc] = useState(false);
@@ -30,7 +31,9 @@ const TestimonialsList = ({ setSlide, testimonials }) => {
                     >
                       <Body>"{testimonial.review}"</Body>
                       <Body className="person">{testimonial.person}</Body>
-                      <Body className="position">{testimonial.person}</Body>
+                      <Body color={colors.gray} className="position">
+                        {testimonial.position}
+                      </Body>
                     </StyledTestimonialBox>
                   </EaseInBottom>
                 );

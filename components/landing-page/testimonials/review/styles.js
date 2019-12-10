@@ -49,7 +49,8 @@ const StyledReviewImg = styled.div`
   background: ${colors.blue};
 
   img {
-    height: 100%;
+    min-height: 100%;
+    width: 100%;
     object-fit: cover;
     ${props =>
       props.currentSlide

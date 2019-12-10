@@ -1,23 +1,78 @@
-import React from "react";
-import { ThemeProvider } from "../../../styles/theme";
-import { Hero, Header, Subheader, Body } from "../../../styles/common";
+import React, { useState } from "react";
+import { ThemeProvider, base } from "../../../styles/theme";
+import {
+  Hero,
+  Container,
+  Column,
+  Header,
+  Subheader,
+  Body,
+  Row
+} from "../../../styles/common";
+import { colors } from "../../../styles/_variables";
+import { StyledIntegrationsImg } from "./styles";
+import {
+  StyledServiceHeadingColumn,
+  StyledServiceTagItem,
+  StyledServiceTagSection
+} from "../styles";
+import { solutionsIntegration } from "../../../content/services-page.json";
+import ScrollIntoView from "../../render-props/scroll-into-view";
+import { EaseInLeft, EaseInRight } from "../../../helpers/triggerAnimations";
 
 const SolutionsIntegration = props => {
+  const [state, setAnimation] = useState(false);
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={base}>
       <Hero>
-        Solutions Integration The volume of requirements, costs and issues
-        specialty practices face today is more expensive and cumbersome than
-        ever before and there seems to be no end in sight. We aim to bring
-        solutions to your conundrum and ease some of the administrative burdens,
-        so your teams can focus on care, patient throughput and outcomes. Our
-        goal is always to Integrate these solutions into a single source system
-        or reporting format for our clientele, so we all know where we all are
-        within the different processes. RCM is only one solution that we
-        provide. Other solutions that we provide are:  Authorizations
-        (Surgical, Diagnostic, Clinical and facility)  Data Indexing  Chart
-        Auditing  Bulk Medical Records Provision  Credentialing and Enrollment
-         AP and Financial Reporting  JOSH STILL ADDING MORE
+        <Container>
+          <ScrollIntoView returnFunc={setAnimation}>
+            <Row>
+              <StyledServiceHeadingColumn flexColumn>
+                <EaseInLeft
+                  style={{ width: "100%" }}
+                  triggerEaseIn={state}
+                  target="solutions-integration-header-section"
+                >
+                  <Header>{solutionsIntegration.header}</Header>
+                  <StyledIntegrationsImg
+                    src="/images/services/integration.png"
+                    alt="revenue cycle management"
+                    width="100%"
+                  />
+                </EaseInLeft>
+              </StyledServiceHeadingColumn>
+              <Column>
+                <EaseInRight
+                  triggerEaseIn={state}
+                  target="solutions-integration-body-section"
+                >
+                  <Body color={colors.gray}>{solutionsIntegration.body}</Body>
+                  <br />
+                  <Body color={colors.gray}>
+                    {solutionsIntegration.secondaryBody}
+                  </Body>
+                  <br />
+                  <br />
+                </EaseInRight>
+                <StyledServiceTagSection leftAlign>
+                  <EaseInRight
+                    triggerEaseIn={state}
+                    target="solutions-integration-tags"
+                  >
+                    {solutionsIntegration.otherSolutions.map(solution => {
+                      return (
+                        <StyledServiceTagItem key={solution}>
+                          {solution}
+                        </StyledServiceTagItem>
+                      );
+                    })}
+                  </EaseInRight>
+                </StyledServiceTagSection>
+              </Column>
+            </Row>
+          </ScrollIntoView>
+        </Container>
       </Hero>
     </ThemeProvider>
   );

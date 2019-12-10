@@ -10,12 +10,13 @@ import {
   StyledTestimonialsContainer,
   StyledMobileResponsiveCarousel
 } from "./styles";
+import { testimonials } from "../../../content/home-page.json";
 
-const Testimonials = ({ reviews }) => {
+const Testimonials = () => {
   const [currentSlide, updateCurrentSlide] = useState(0);
 
   const beforeSlide = current => {
-    if (current === reviews.length - 1) {
+    if (current === testimonials.reviews.length - 1) {
       return updateCurrentSlide(0);
     }
     return updateCurrentSlide(current + 1);
@@ -23,83 +24,39 @@ const Testimonials = ({ reviews }) => {
 
   const [inView, setView] = useState(false);
 
-  const onEnter = ({ previousPosition }) => {
-    setTimeout(() => {
-      if (
-        previousPosition === Waypoint.below ||
-        previousPosition === Waypoint.above
-      ) {
-        setView(true);
-      }
-    }, 100);
-  };
-
-  const onLeave = ({ previousPosition }) => {
-    setTimeout(() => {
-      if (previousPosition === Waypoint.inside) {
-        setView(false);
-      }
-    }, 100);
-  };
-
   return (
     <ThemeProvider theme={invert(base)}>
       <StyledGradientHero layout={centered} inView={inView}>
+        <Header
+          style={{
+            width: "100%",
+            textAlign: "center",
+            marginTop: 100,
+            overflow: "hidden"
+          }}
+        >
+          {testimonials.header}
+        </Header>
+        <Subheader
+          style={{ width: "80%", textAlign: "center", overflow: "hidden" }}
+        >
+          {testimonials.subheader}
+        </Subheader>
+
         <StyledTestimonialsContainer>
-          <Header>What clients say</Header>
-          <Subheader>Hear from your peers that know us best.</Subheader>
-
-          <StyledTestimonialsContainer>
-            <Carousel
-              withoutControls={true}
-              wrapAround={true}
-              autoplay={true}
-              dragging={false}
-              beforeSlide={beforeSlide}
-              cellSpacing={0}
-              slidesToShow={3}
-              slideWidth="600px"
-              cellAlign="center"
-              style={{ width: "100%" }}
-            >
-              {reviews.map((review, idx) => {
-                return (
-                  <StyledReviewWrapper
-                    currentSlide={currentSlide === idx}
-                    key={review.person}
-                  >
-                    <Review
-                      key={review.person}
-                      person={review.person}
-                      position={review.position}
-                      image={review.image}
-                      review={review.review}
-                      currentSlide={currentSlide === idx}
-                    />
-                  </StyledReviewWrapper>
-                );
-              })}
-            </Carousel>
-          </StyledTestimonialsContainer>
-        </StyledTestimonialsContainer>
-
-        <StyledMobileResponsiveCarousel>
-          <Header>What clients say</Header>
-          <Subheader>Hear from your peers that know us best.</Subheader>
           <Carousel
             withoutControls={true}
             wrapAround={true}
             autoplay={true}
-            autoplayInterval={4000}
             dragging={false}
             beforeSlide={beforeSlide}
             cellSpacing={0}
             slidesToShow={3}
-            slideWidth="300px"
+            slideWidth="600px"
             cellAlign="center"
             style={{ width: "100%" }}
           >
-            {reviews.map((review, idx) => {
+            {testimonials.reviews.map((review, idx) => {
               return (
                 <StyledReviewWrapper
                   currentSlide={currentSlide === idx}
@@ -107,6 +64,38 @@ const Testimonials = ({ reviews }) => {
                 >
                   <Review
                     key={review.person}
+                    person={review.person}
+                    position={review.position}
+                    image={review.image}
+                    review={review.review}
+                    currentSlide={currentSlide === idx}
+                  />
+                </StyledReviewWrapper>
+              );
+            })}
+          </Carousel>
+        </StyledTestimonialsContainer>
+
+        <StyledMobileResponsiveCarousel>
+          <Carousel
+            withoutControls={true}
+            wrapAround={true}
+            autoplay={true}
+            dragging={false}
+            beforeSlide={beforeSlide}
+            cellSpacing={0}
+            slidesToShow={1}
+            cellAlign="center"
+          >
+            {testimonials.reviews.map((review, idx) => {
+              return (
+                <StyledReviewWrapper
+                  currentSlide={currentSlide === idx}
+                  key={review.person}
+                >
+                  <Review
+                    key={review.person}
+                    headshot={review.headshot}
                     person={review.person}
                     position={review.position}
                     image={review.image}

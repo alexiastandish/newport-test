@@ -30,24 +30,37 @@ const StyledHeroTestimonial = styled(Box)`
 const StyledHeroTestimonialInfo = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
 
   .hero-testimonial-info {
+    margin-top: 5px;
+    margin-bottom: 15px;
     p:nth-of-type(1) {
       text-transform: uppercase;
+      line-height: 18px;
+      margin-top: 15px;
     }
     p:nth-of-type(2) {
       font-size: 12px;
+      line-height: 16px;
     }
   }
+
+  ${media.sm`
+  flex-direction: column;
+  `}
 `;
 
 const StyledHeroTestimonialImage = styled.img`
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 20px;
+  width: 115px;
+  margin-right: 25px;
+  ${props =>
+    props.headshot &&
+    ` width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;`}
 `;
 
 const StyledTestimonialBox = styled(Box)`
@@ -67,7 +80,7 @@ const StyledTestimonialBox = styled(Box)`
   }
   .position {
     font-size: 12px;
-    font-weight: 500;
+    line-height: 16px;
     margin-top: 0px;
   }
 

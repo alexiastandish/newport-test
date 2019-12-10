@@ -9,7 +9,7 @@ const MobileNav = ({ menuOpen, handleMenuToggle, stickyNav, router }) => {
       <StyledMobileNewportMedLogo
         src="/images/logos/npm-logo.png"
         alt="newport-med"
-        onClick={() => router.push("/")}
+        onClick={() => router.push("/").then(() => window.scrollTo(0, 0))}
       />
       <HamburgerMenu menuOpen={menuOpen} onClick={handleMenuToggle} />
       <OpenMobileMenu router={router} menuOpen={menuOpen} />

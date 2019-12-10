@@ -64,6 +64,10 @@ const StyledServiceIcon = styled.div`
 const StyledBoxSubheader = styled(Subheader)`
   margin-bottom: 10px;
   margin-top: 0px;
+  ${media.sm`
+  margin-right: 0px;
+  margin-left: 0px;
+  `}
 `;
 
 const StyledServicesContainer = styled(Container)`

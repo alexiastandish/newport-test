@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ThemeProvider, base } from "../../../styles/theme";
 import { Header, Row, ButtonLink, Subheader } from "../../../styles/common";
-import { ServiceCircle } from "./service-circle";
+import ServiceCircle from "./service-circle";
 import {
   StyledServiceCircleWrapper,
   StyledLandingPageHero,

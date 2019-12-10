@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import anime from "animejs";
+import styled from "styled-components";
 import Link from "next/link";
+import { withRouter } from "next/router";
 
-const ServiceCircle = () => {
+const ServiceCircle = props => {
   useEffect(() => {
     anime({
       targets: "svg",
@@ -60,25 +62,58 @@ const ServiceCircle = () => {
       </defs>
       <title>home-circle-revised</title>
       <g>
-        <path
+        <StyledPath
+          onClick={() =>
+            props.router.push(
+              {
+                pathname: "/services",
+                query: { name: "solutions-integration" }
+              },
+              "/services"
+            )
+          }
           d="M157.2,373.5l56.4-57.6a84.6,84.6,0,0,1-54.2-56.2h17.3a7.2,7.2,0,0,0,5.3-12l-77.6-86.8a7.2,7.2,0,0,0-10.7,0L16,247.7a7.2,7.2,0,0,0,5.4,12H42.5A199.1,199.1,0,0,0,208.8,432.6l-51.6-52.8A4.5,4.5,0,0,1,157.2,373.5Z"
           transform="translate(-14.2 -8.9)"
-          // style="fill: url(#a)"
           style={{ fill: "url(#apple)" }}
         />
-        <path
+        <StyledPath
+          onClick={() =>
+            props.router.push(
+              {
+                pathname: "/services",
+                query: { name: "revenue-cycle-management" }
+              },
+              "/services"
+            )
+          }
           d="M381.9,325.8a4.5,4.5,0,0,1-3.3-1.5l-58.3-64.2c-7.7,20.9-33,47.9-49.4,56.6V288.4a7.2,7.2,0,0,0-12.3-5.1l-87.8,88.3a7.1,7.1,0,0,0,0,10.1l87.8,88.2a7.2,7.2,0,0,0,12.3-5V433.7c88.8-13.3,152.8-78.9,166.6-166.7h0l-52.2,57.4A4.9,4.9,0,0,1,381.9,325.8Z"
           transform="translate(-14.2 -8.9)"
-          // style="fill: url(#b)"
           style={{ fill: "url(#banana)" }}
         />
-        <path
+        <StyledPath
+          onClick={() =>
+            props.router.push(
+              {
+                pathname: "/services",
+                query: { name: "practice-advocates" }
+              },
+              "/services"
+            )
+          }
           d="M99,143.7a4.5,4.5,0,0,1,3.4,1.5l57.7,64.5A84.3,84.3,0,0,1,216,154.8v16.6a7.2,7.2,0,0,0,12,5.4l86.9-77.7a7.2,7.2,0,0,0,0-10.7L228,10.7a7.2,7.2,0,0,0-12,5.4V37.8C129,48.4,58.1,115.5,43.8,203.1l51.9-57.9A4.1,4.1,0,0,1,99,143.7Z"
           transform="translate(-14.2 -8.9)"
-          // style="fill: url(#c)"
           style={{ fill: "url(#citrus)" }}
         />
-        <path
+        <StyledPath
+          onClick={() =>
+            props.router.push(
+              {
+                pathname: "/services",
+                query: { name: "cloud-based-services" }
+              },
+              "/services"
+            )
+          }
           d="M332.1,93.8a4.3,4.3,0,0,1-1.5,3.3L265.9,155a84.3,84.3,0,0,1,55.4,55.8h-17a7.2,7.2,0,0,0-5.4,12l77.7,86.7a7.2,7.2,0,0,0,10.7,0l77.6-86.7a7.2,7.2,0,0,0-5.3-12H438.4C427.5,123.9,360.4,53.2,273,38.9l57.6,51.5A4.5,4.5,0,0,1,332.1,93.8Z"
           transform="translate(-14.2 -8.9)"
           style={{ fill: "url(#danish)" }}
@@ -277,4 +312,10 @@ const ServiceCircle = () => {
   );
 };
 
-export { ServiceCircle };
+export default withRouter(ServiceCircle);
+
+const StyledPath = styled.path`
+  &:hover {
+    cursor: pointer;
+  }
+`;

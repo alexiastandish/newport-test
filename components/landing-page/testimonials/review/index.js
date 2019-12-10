@@ -8,12 +8,19 @@ import {
 } from "./styles";
 import { Body, Subheader, StyledBlockQuote } from "../../../../styles/common";
 
-const Review = ({ person, position, image, review, currentSlide }) => {
+const Review = ({
+  person,
+  position,
+  image,
+  review,
+  currentSlide,
+  headshot
+}) => {
   return (
     <StyledReview currentSlide={currentSlide}>
       <StyledReviewHeader>
         <StyledBlockQuote currentSlide={currentSlide}>&#8220;</StyledBlockQuote>
-        <StyledReviewImg currentSlide={currentSlide}>
+        <StyledReviewImg currentSlide={currentSlide} headshot={headshot}>
           <img src={image} alt={person} />
         </StyledReviewImg>
         <StyledPerson currentSlide={currentSlide}>

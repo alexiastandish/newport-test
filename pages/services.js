@@ -9,6 +9,7 @@ import {
 } from "../components/services/styles";
 import { hero } from "../content/services-page.json";
 import Layout from "../components/layouts";
+import { withRouter } from "next/router";
 
 import RevenueCycleManagement from "../components/services/revenue-cycle-management";
 import CloudBasedServices from "../components/services/cloud-based-services";
@@ -22,7 +23,7 @@ import anime from "animejs";
 const Services = props => {
   const [beginAnimation, triggerAnimationFunc] = useState(false);
   const setSection = section => {
-    let target = document.getElementById(section);
+    let target = document.getElementById(`scrolling-${section}`);
     if (target) {
       target.scrollIntoView({
         behavior: "smooth",
@@ -45,13 +46,27 @@ const Services = props => {
 
   useEffect(() => {
     triggerAnimationFunc(true);
-  }, beginAnimation);
+    if (props.router && props.router.query.name) {
+      return scrollingFunction(props.router.query.name);
+    }
+  }, [beginAnimation, props.router && props.router.query.name]);
+
+  const scrollingFunction = slug => {
+    let target = document.getElementById(`scrolling-${slug}`);
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+      // history.pushState(null, null, `/features#${section}`);
+    }
+  };
 
   return (
     <Layout>
       <ThemeProvider theme={base}>
         <StyledServicesHero layout={centered}>
-          <Container>
+          <Container headingContainer>
             <EaseInBottom
               triggerEaseIn={beginAnimation}
               className="services-heading"
@@ -77,19 +92,20 @@ const Services = props => {
         </StyledServicesHero>
       </ThemeProvider>
 
-      <div id={hero.services[0].link}>
+      <div id={`scrolling-${hero.services[0].link}`}>
         <RevenueCycleManagement />
       </div>
-      <div id={hero.services[1].link}>
+      <div id={`scrolling-${hero.services[1].link}`}>
         <CloudBasedServices />
       </div>
-      <div id={hero.services[2].link}>
+      <div id={`scrolling-${hero.services[2].link}`}>
         <SolutionsIntegration />
       </div>
-      <div id={hero.services[3].link}>
+      <div id={`scrolling-${hero.services[3].link}`}>
         <PracticeAdvocates />
       </div>
     </Layout>
   );
 };
-export default Services;
+
+export default withRouter(Services);

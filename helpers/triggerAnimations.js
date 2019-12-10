@@ -38,7 +38,7 @@ const EaseInLeft = ({ target, children, triggerEaseIn, style }) => {
   );
 };
 
-const EaseInRight = ({ target, children, triggerEaseIn, style }) => {
+const EaseInRight = ({ target, children, triggerEaseIn, style, className }) => {
   triggerEaseIn &&
     useEffect(() => {
       anime({
@@ -56,11 +56,12 @@ const EaseInRight = ({ target, children, triggerEaseIn, style }) => {
   return (
     <>
       {children.length > 1 ? (
-        children.map(child => {
+        children.map((child, index) => {
           return (
             <StyledEaseInWrapper
               style={style}
-              key={child.props.children || child.props.name}
+              className={className}
+              key={child.props.children || child.props.name || child.props.type}
               className={target}
             >
               {child}
@@ -88,7 +89,7 @@ const EaseInBottom = ({
         translateY: [100, 0],
         easing: "easeOutQuad",
         duration: 700,
-        autoplay: false,
+        autoplay: true,
         loop: false,
         opacity: [0, 1],
         delay: anime.stagger(150, { start: 600 })

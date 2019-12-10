@@ -5,24 +5,64 @@
     "services": [
       {
         "service": "Revenue Cycle Management (RCM)",
-        "link": "#revenue-cycle-management",
+        "link": "revenue-cycle-management",
         "icon": "/images/icons/money.svg"
       },
       {
         "service": "Cloud based services",
-        "link": "#cloud-based-services",
+        "link": "cloud-based-services",
         "icon": "/images/icons/cloud.svg"
       },
       {
         "service": "Solutions integration",
-        "link": "#solutions-integration",
+        "link": "solutions-integration",
         "icon": "/images/icons/gear.svg"
       },
       {
         "service": "Practice advocates",
-        "link": "#practice-advocates",
+        "link": "practice-advocates",
         "icon": "/images/icons/medical.svg"
       }
     ]
+  },
+  "revenueCycleManagement": {
+    "header": "Revenue Cycle Management (RCM)",
+    "body": "Our goal with our RCM offering is to bring your entity to a higher level and provide expertise beyond submitting a claim and posting a payment. You should know that we rarely accept “that’s the way we’ve always done it” from our teams, our partners and our clients. We let revenue and data play a major role in the way we work with our clients.",
+    "secondaryBody": "From our coding expertise to our team of analysts we are always looking to maximize revenue, decrease denials, lower days in AR and influence change within our client’s teams. Proving financial impacts is one of our most meaningful steps on the road to “ensuring the financial health of the practices we serve.”"
+  },
+  "cloudBasedServices": {
+    "header": "Cloud Based Services",
+    "body": "With reimbursements in decline while costs for services climb, practices have had to do more with less. We have developed our IT services to meet the specific needs of your specialty practice. We want your practices operating at maximum efficiency with their internal IT infrastructure. Our confidence is shown in our willingness to integrate this to your revenue. With a willing client we even “share the risk” in your financial success. Our dedicated Technology team works with you to integrate lean technology and offer a number of “best practice” recommendations to move your group ahead and eradicate waste. This includes expensive systems or apps that, at times add little value, other than the comfort of an icon.",
+    "itOverviewItems": [
+      "Your personal technology consultants",
+      "Expertise ranging from security to app development",
+      "Single point of contact for support",
+      "Support & implementation",
+      "Firewall, security, & third party vendor management",
+      "Monthly network & security audits",
+      "Shared risk model"
+    ]
+  },
+  "solutionsIntegration": {
+    "header": "Solutions Integration",
+    "body": "The volume of requirements, costs, and issues specialty practices face today is more expensive and cumbersome than ever before. We aim to bring solutions to your conundrum and ease some of the administrative burdens so your teams can focus on care, patient throughput, and outcomes. We integrate these solutions into a single source system or report keeping everyone in the loop with the different processes.",
+    "secondaryBody": "RCM is only one solution that we provide. Other solutions that we provide are:",
+    "otherSolutions": [
+      "Surgical authorizations",
+      "Diagnostic authorizations",
+      "Clinical authorizations",
+      "Facility authorizations",
+      "Data indexing",
+      "Chart auditing",
+      "Medical records provision",
+      "Credentialing/enrollment",
+      "AP & financial reporting"
+    ]
+  },
+  "practiceAdvocates": {
+    "header": "Practice Advocates",
+    "body": "Our growing Client Success team is the tip of the spear in our advocacy for your financial success. This is where we start taking your current processes and keep them where they fit or refine them based on other specialty practices successes. They also provide continual feedback to your organization to continually improve our respective revenue.",
+    "secondaryBody": "The financial viability of your organization is what keeps your doors open and profitable. Innovation is an increasing need for you. Your specialty practice is unique in this need and the cookie cutter apps available to you are likely developed for primary care physicians (the mass). We at NewportMed have proven successful in the innovation of apps that better meet the unique needs of our clients.",
+    "conclusiveBody": "    Together we can stay ahead of the market by anticipating change."
   }
 }
