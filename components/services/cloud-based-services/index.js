@@ -28,6 +28,12 @@ const CloudBasedServices = props => {
                   target="cloud-based-services-heading"
                 >
                   <Header>{cloudBasedServices.header}</Header>
+                  <img
+                    src="/images/services/cloud-based.png"
+                    alt="cloud based services"
+                    width="50%"
+                  />
+
                   <br />
                 </EaseInBottom>
                 <StyledServiceTagSection>

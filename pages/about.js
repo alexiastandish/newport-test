@@ -59,7 +59,7 @@ const About = props => {
                     <Header>{ourApproach.header}</Header>
                     <br />
                     <StyledAboutBody>
-                      {ourStory.body}
+                      {ourApproach.body}
                       <br />
                       <br />
                       {ourApproach.secondaryBody}

@@ -9,17 +9,17 @@
         "icon": "/images/icons/money.svg"
       },
       {
-        "service": "Cloud based services",
+        "service": "Cloud Based Services",
         "link": "cloud-based-services",
         "icon": "/images/icons/cloud.svg"
       },
       {
-        "service": "Solutions integration",
+        "service": "Solutions Integration",
         "link": "solutions-integration",
         "icon": "/images/icons/gear.svg"
       },
       {
-        "service": "Practice advocates",
+        "service": "Practice Advocates",
         "link": "practice-advocates",
         "icon": "/images/icons/medical.svg"
       }
@@ -28,7 +28,7 @@
   "revenueCycleManagement": {
     "header": "Revenue Cycle Management (RCM)",
     "body": "Our goal with our RCM offering is to bring your entity to a higher level and provide expertise beyond submitting a claim and posting a payment. You should know that we rarely accept “that’s the way we’ve always done it” from our teams, our partners and our clients. We let revenue and data play a major role in the way we work with our clients.",
-    "secondaryBody": "From our coding expertise to our team of analysts we are always looking to maximize revenue, decrease denials, lower days in AR and influence change within our client’s teams. Proving financial impacts is one of our most meaningful steps on the road to “ensuring the financial health of the practices we serve.”"
+    "secondaryBody": "From our coding expertise to our team of analysts we are always looking to maximize revenue, decrease denials, lower days in AR and influence change within our client’s practice. Proving financial impacts is one of our most meaningful steps on the road to “ensuring the financial health of the practices we serve.”"
   },
   "cloudBasedServices": {
     "header": "Cloud Based Services",

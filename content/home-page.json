@@ -6,7 +6,7 @@
   },
   "services": [
     {
-      "service": "Revenue cycle management",
+      "service": "Revenue Cycle Management",
       "desc": "Financial expectations drive our processes and IT platforms, including feedback + client education.",
       "button": {
         "text": "Learn More",
@@ -14,7 +14,7 @@
       }
     },
     {
-      "service": "Cloud based services",
+      "service": "Cloud Based Services",
       "desc": "Our offerings are global, 24/7, HIPAA Compliant on the cloud.",
       "button": {
         "text": "Learn More",
@@ -22,15 +22,15 @@
       }
     },
     {
-      "service": "Solutions integration",
-      "desc": "Revenue focused IT solutions. Home-grown Analytics Dashboard. Robotic process automation (Bot’s).",
+      "service": "Solutions Integration",
+      "desc": "Revenue focused IT solutions. Home-grown Analytics Reporting. Robotic process automation (Bot’s).",
       "button": {
         "text": "Learn More",
         "link": "solutions-integration"
       }
     },
     {
-      "service": "Practice advocates",
+      "service": "Practice Advocates",
       "desc": "Though our services are comprehensive and complex, we make them simple for you.",
       "button": {
         "text": "Learn More",
@@ -50,22 +50,22 @@
     "reviews": [
       {
         "review": "NewportMed’s passion for healthcare and attention to detail cannot be overestimated. We are very pleased with our working relationship and continue to use them to improve our efficiencies and revenue cycle.",
-        "person": "James T. Caillouette",
-        "position": "M.D. of Newport Orthopedic Institute in Newport Beach, CA",
+        "person": "James T. Caillouette, M.D.",
+        "position": "Newport Orthopedic Institute in Newport Beach, CA",
         "image": "/images/testimonials/caillouette.jpg",
         "headshot": true
       },
       {
         "review": "NewportMed has done a terrific job and we are very pleased with their collaboration. Their education services and custom charge ticket development has had a direct impact on our bottom line.",
-        "person": "Cara M. Waller",
+        "person": "Cara M. Waller, CEO, MHA",
         "position": "Newport Orthopedic Institute in Newport Beach, CA",
         "image": "/images/testimonials/cara-waller-logo.png",
         "headshot": false
       },
       {
         "review": "With your help, we made a smooth transition to electronic medical records (EMR) and achieved our goal of satisfying the criteria for Phase I of Meaningful Use for 100% of our physicians.",
-        "person": "Michael J. Fitzpatrick",
-        "position": "M.D., President of South Orange County Orthopedics in Mission Viejo, CA",
+        "person": "Michael J. Fitzpatrick, M.D.",
+        "position": "President of South Orange County Orthopedics in Mission Viejo, CA",
         "image": "/images/testimonials/michael-fitzpatrick.png",
         "headshot": true
       },
@@ -78,36 +78,36 @@
       },
       {
         "review": "We have been working with Newport Medical Solutions for nearly 8 years now. NMS has repeatedly demonstrated professionalism and attention to detail on every single claim as well as the willingness to educate and work with our entire team.",
-        "person": "Ting Chi",
-        "position": "M.D. of Orange County Hand Surgery Specialists in Fountain Valley, CA",
+        "person": "Ying Chi, M.D.",
+        "position": "Orange County Hand Surgery Specialists in Fountain Valley, CA",
         "image": "/images/testimonials/ying-chi.jpg",
         "headshot": true
       },
       {
         "review": "I have been extremely happy using NewportMed as our billing company. In all my years of experience, I have never been as satisfied as I am with them.",
-        "person": "Michael Gillman",
-        "position": "M.D. of Restore Orthopedic and Spine Center in Orange, CA",
+        "person": "Michael Gillman, M.D.",
+        "position": "Restore Orthopedic and Spine Center in Orange, CA",
         "image": "/images/testimonials/mike-gillman.png",
         "headshot": true
       },
       {
         "review": "NewportMed’s services are second-to-none. Your partnership with my practice has also enabled me to focus more time on surgeries and services I specialize in.",
-        "person": "Christopher Duma",
-        "position": "M.D. of Brain &amp; Spine Surgeons of Orange County in Newport Beach, CA",
+        "person": "Christopher Duma. M.D.",
+        "position": "Brain & Spine Surgeons of Orange County in Newport Beach, CA",
         "image": "/images/testimonials/chris-duma.png",
         "headshot": true
       },
       {
         "review": "I’ve been extremely impressed with your knowledge of my specialty and expertise in the coding nuances. In addition, your understanding and direct involvement in credentialing and proper dictation has been invaluable.",
-        "person": "Richard Kim",
-        "position": "M.D., M.S. of DISC Sports and Spine Center in Newport Beach, CA",
+        "person": "Richard Kim, M.D., M.S.",
+        "position": "DISC Sports and Spine Center in Newport Beach, CA",
         "image": "/images/testimonials/richard-kim.png",
         "headshot": true
       },
       {
         "review": "The meetings to review my coding, my dictation and carrier reimbursements have been essential to my understanding of what specific areas of surgery generate revenue for my practice.",
-        "person": "William Dobkin",
-        "position": "M.D. of William Dobkin, MD, Inc. in Newport Beach, CA",
+        "person": "William Dobkin, M.D.",
+        "position": "William Dobkin, MD, Inc. in Newport Beach, CA",
         "image": "/images/testimonials/william-dobkin.jpg",
         "headshot": true
       }

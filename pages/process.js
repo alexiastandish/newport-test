@@ -39,6 +39,9 @@ const Process = props => {
               >
                 <Header>{newportmedEffect.header}</Header>
                 <Subheader>{newportmedEffect.subheader}</Subheader>
+                <Subheader>
+                  Below is an outline of our onboarding process.
+                </Subheader>
                 <StyledNMEImg
                   src="/images/process/newportmed-effect-process.jpg"
                   alt="newportmed-effect"
