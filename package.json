@@ -33,7 +33,7 @@
     "body-parser": "^1.19.0",
     "classnames": "^2.2.6",
     "express": "^4.17.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "nuka-carousel": "^4.5.12",
     "react-helmet": "^5.2.1",
     "react-waypoint": "^9.0.2",
